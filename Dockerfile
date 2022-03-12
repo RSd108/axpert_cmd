@@ -5,8 +5,8 @@ ENV LANG C.UTF-8
 
 WORKDIR /app
 
-RUN apk add --no-cache python2 git && \
-    python2 -m ensurepip && \
+RUN apk add --no-cache python3 git && \
+    python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     git clone https://github.com/aquarat/mpp-solar.git . && \
     pip install --upgrade paho-mqtt && \
